@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
+
+    /* Custom scrollbar styles */
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px; /* Added height for horizontal scrollbars */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    /* Remove scrollbar from specific elements if needed */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
