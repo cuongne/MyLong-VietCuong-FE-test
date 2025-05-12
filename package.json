@@ -1,10 +1,11 @@
 {
     "name": "task-management",
     "version": "1.0.1",
-    "main": "dist/index.js",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.es.js",
     "types": "dist/index.d.ts",
-    "private": false,
     "type": "module",
+    "private": false,
     "exports": {
         ".": {
             "import": "./dist/index.js",
@@ -30,6 +31,7 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
+        "prepare": "npm run build",
         "test": "vitest",
         "server": "json-server --watch db.json --port 3001"
     },
