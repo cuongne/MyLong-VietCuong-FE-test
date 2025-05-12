@@ -15,10 +15,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'lib/main.ts'),
       name: 'TaskManagement',
-      fileName: (format) => `index.${format}.js`,
-      formats: ['es', 'cjs'],
+      fileName: 'task-management',
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

@@ -1,17 +1,16 @@
 {
     "name": "task-management",
     "version": "1.0.1",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.es.js",
-    "types": "dist/index.d.ts",
+    "main": "./dist/task-management.umd.cjs",
+	"module": "./dist/task-management.js",
+	"exports": {
+		".": {
+			"import": "./dist/task-management.js",
+			"require": "./dist/task-management.umd.cjs"
+		}
+	},
     "type": "module",
     "private": false,
-    "exports": {
-        ".": {
-            "import": "./dist/index.es.js",
-            "types": "./dist/index.d.ts"
-        }
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/cuongne/MyLong-VietCuong-FE-test.git"
@@ -27,6 +26,7 @@
         "/dist"
     ],
     "scripts": {
+        "prebuild": "rm -rf dist",
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
