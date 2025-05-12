@@ -1,7 +1,7 @@
 import { Tick } from "../icons";
 import { cn } from "../utils/func";
 
-const Checkbox = ({ checked = false, onChecked }: { checked: boolean, onChecked: (checked: boolean) => void }) => {
+export const Checkbox = ({ checked = false, onChecked }: { checked: boolean, onChecked: (checked: boolean) => void }) => {
     const handleChange = () => {
         onChecked(!checked)
     }

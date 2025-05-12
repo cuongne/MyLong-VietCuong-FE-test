@@ -9,7 +9,7 @@ interface PopupProps {
     className?: string;
 
 }
-const Popup = ({ isOpen, closePopup, children, className }: PopupProps) => {
+export const Popup = ({ isOpen, closePopup, children, className }: PopupProps) => {
     const popupRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {

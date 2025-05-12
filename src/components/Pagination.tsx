@@ -1,5 +1,5 @@
 
-const Pagination = ({ totalItems, itemsPerPage, onPageChange,currentPage }: {
+export const Pagination = ({ totalItems, itemsPerPage, onPageChange,currentPage }: {
     totalItems: number;
     itemsPerPage: number;
     currentPage: number;
