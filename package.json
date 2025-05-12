@@ -6,10 +6,10 @@
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
-          "import": "./dist/index.es.js",
-          "require": "./dist/index.umd.js"
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.js"
         }
-      },
+    },
     "type": "module",
     "private": false,
     "repository": {
@@ -27,13 +27,10 @@
         "/dist"
     ],
     "scripts": {
-        "prebuild": "rm -rf dist",
         "dev": "vite",
-        "build": "tsc -b && vite build",
-        "lint": "eslint .",
-        "preview": "vite preview",
+        "build": "tsc && vite build",
         "prepare": "npm run build",
-        "test": "vitest",
+        "preview": "vite preview",
         "server": "json-server --watch db.json --port 3001"
     },
     "publishConfig": {
