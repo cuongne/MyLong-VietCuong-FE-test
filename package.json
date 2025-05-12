@@ -1,13 +1,14 @@
 {
     "name": "task-management",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "prepare": "vite build",
         "preview": "vite preview",
         "test": "vitest",
         "server": "json-server --watch db.json --port 3001"
