@@ -1,10 +1,16 @@
 {
     "name": "task-management",
-    "private": true,
     "version": "1.0.0",
-    "type": "module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "private": false,
+    "type": "module",
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    },
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
