@@ -8,7 +8,7 @@
     "private": false,
     "exports": {
         ".": {
-            "import": "./dist/index.js",
+            "import": "./dist/index.es.js",
             "types": "./dist/index.d.ts"
         }
     },
@@ -24,7 +24,7 @@
         "typescript"
     ],
     "files": [
-        "dist"
+        "/dist"
     ],
     "scripts": {
         "dev": "vite",
@@ -36,7 +36,7 @@
         "server": "json-server --watch db.json --port 3001"
     },
     "publishConfig": {
-        "access": "restricted"
+        "access": "public"
     },
     "peerDependencies": {
         "react": "^18.0.0",
